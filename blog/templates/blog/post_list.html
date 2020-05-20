@@ -24,13 +24,15 @@
     <p>I need cat energy -> catnergy</p>
 
     <div>
-        <h1><a href=""></a>The First Post</h1>
-        <p>preview to do</p>
+        <h1><a href=""></a>Posts</h1>
+        {% for post in posts %}
+            <div>
+                <h2><a href="">{{ post.title }}</a> </h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+                <p>Published on: {{ post.published_date }}</p>
+            </div>
+        {% endfor %}
     </div>
 
-    <div>
-        <h2><a href=""></a>The Second Post</h2>
-        <p>preview to do</p>
-    </div>
 </body>
 </html>

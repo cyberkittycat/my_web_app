@@ -1,0 +1,101 @@
+h1 a, h2 a {
+    color: darkorchid;
+}
+
+.main-nav {
+    float: left;
+    list-style: none;
+    margin-top: 25px;
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.main-nav li a {
+    color: red;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px
+}
+
+.main-nav li.active a {
+    border: 1.5px solid red;
+    font-weight: bold;
+
+}
+
+.main-nav li a:hover {
+    border: 1.8px solid red;
+    background-color: snow;
+    transition: all 0.3s ease-in;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.page_header {
+    background-color: unset;
+    margin-left: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page_header h1, .page_header h1 a, .page_header h1 a:active {
+    color: #000000;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.page_header h1 a:visited {
+    color: indigo;
+}
+
+body {
+    padding-left: 0px;
+    font-family: "Lobster";
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+.post {
+    padding-left: 15px;
+    margin-bottom: 70px;
+}
+
+.post h2 a {
+    color: darkorchid;
+}
+
+.post h2 a:visited {
+    color: purple;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    color: dimgrey;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}

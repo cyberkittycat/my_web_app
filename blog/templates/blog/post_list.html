@@ -1,38 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Leave the name to later</title>
-</head>
-<body>
-    <header>
-        <div class="row">
-            <div class="logo">
-            <!img src="logo.png"/>
+{% extends 'blog/base.html' %}
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+
+            <div class="date">
+                <p>published: {{ post.published_date }}</p>
             </div>
-        <ul class="main-nav">
-            <li class="active"><a href = ""> Home </a></li>
-            <li><a href = ""> Blog </a></li>
-            <li><a href = ""> Pictures </a></li>
-            <li><a href = ""> About </a></li>
-
-        </ul>
-
         </div>
-    </header>
-    <p>Hiiiiiyyaa</p>
-    <p>I need cat energy -> catnergy</p>
+    {% endfor %}
 
-    <div>
-        <h1><a href=""></a>Posts</h1>
-        {% for post in posts %}
-            <div>
-                <h2><a href="">{{ post.title }}</a> </h2>
-                <p>{{ post.text|linebreaksbr }}</p>
-                <p>Published on: {{ post.published_date }}</p>
-            </div>
-        {% endfor %}
-    </div>
+{% endblock %}
 
-</body>
-</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leave the name to later</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <style type="text/css">
+        body {
+            background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.35)), url(../../static/lazyCat_2.png);
+	        height: 100vh;
+	        background-size: cover;
+	        background-position: center;
+        }
+    </style>
+
+    <header>
+        <div class="row">
+            <div class="logo">
+            <img src="../../static/logo.png"/>
+            </div>
+        <ul class="main-nav">
+            <li class="active"><a href = ""> Home </a></li>
+            <li><a href = ""> Blog </a></li>
+            <li><a href = ""> Pictures </a></li>
+            <li><a href = ""> About </a></li>
+
+        </ul>
+
+        </div>
+    </header>
+
+    <div class="page_header">
+        <h1><a href=""></a>Posts</h1>
+    </div>
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,8 +1,9 @@
 {% extends 'blog/base.html' %}
 {% block content %}
     <div class="post">
+        {% load markdown_extras %}
         <h2>{{ post.title }}</h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <p>{{ post.text | markdown | safe |linebreaksbr }}</p>
         {% if post.published_date %}
             <div class="date">
                 <p>published: {{ post.published_date }}</p>
